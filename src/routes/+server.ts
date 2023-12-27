@@ -1,6 +1,6 @@
-import { error, type RequestEvent } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 
-export async function GET({ url }: RequestEvent) {
-	error(404, { message: 'Not found' });
+export async function GET() {
+  console.log("in GET");
+  error(404, { message: 'Not found' });
 }
-
